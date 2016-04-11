@@ -44,7 +44,7 @@ public class _Globals : MonoBehaviour {
         }
         public void ErrorCheck() {
             sceneLength = SceneManager.sceneCountInBuildSettings;
-            if (_Globals.nextBranch + 1 > sceneLength) proceed = false;
+            if (nextBranch + 1 > sceneLength) proceed = false;
         }
         public void UpdateCompletedBranches() {
             if (completedBranches.ContainsKey(currentSceneIndex)) { proceed = false;  return; }
