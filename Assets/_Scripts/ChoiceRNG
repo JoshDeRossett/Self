@@ -1,0 +1,10 @@
+using UnityEngine;
+using System.Collections;
+public class ChoiceRNG : Monobehavior {
+    private void Start () {
+    GenerateChoices();
+    }
+    private void GenerateChoices() {
+        
+    }
+}
