@@ -5,18 +5,16 @@ public class ChoiceDisplay : MonoBehaviour {
    public int _trait;
    private string t1;
    private string t2;
-   private bool displayed;
    private int traitvalue1;
    private int traitvalue2;
    private void Start() {
        DetermineTrait();
-       IsDisplayed(t1, t2);
-       gameObject.SetActive(displayed);
+       gameObject.SetActive(IsDisplayed(t1, t2));
    }
    private bool IsDisplayed(string _trait1, string _trait2) {
        _Globals.trait.TryGetValue(_trait1, out traitvalue1);
        _Globals.trait.TryGetValue(_trait2, out traitvalue2);
-       displayed = traitvalue1 > traitvalue2 ? true : false;
+       bool displayed = traitvalue1 > traitvalue2 ? true : false;
        return displayed;
    }
    private void DetermineTrait() {
